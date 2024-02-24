@@ -110,10 +110,10 @@
 
 // prototype -> parent
 
-const obj = {
-  name: "vasi",
-  age: 10,
-};
+// const obj = {
+//   name: "vasi",
+//   age: 10,
+// };
 
 // const nums = [1, 2, 3, 4];
 // nums.__proto__ = obj;
@@ -124,9 +124,9 @@ const obj = {
 
 // console.log(typeof nums);
 
-const nums = [10, 20, 30, 40];
-nums[100] = 100;
-nums["name"] = "vasanth";
+// const nums = [10, 20, 30, 40];
+// nums[100] = 100;
+// nums["name"] = "vasanth";
 // console.log(nums, nums.length);
 
 // for (let i = 0; i < nums.length; i++) {
@@ -143,3 +143,67 @@ nums["name"] = "vasanth";
 
 // React -> view layer (library), faster,
 // SPA -> Single Page applications
+// npx create-react-app .
+
+// const vasanth = {
+//   name: "vasanth",
+//   age: 10,
+// };
+
+// const suresh = {
+//   name: "suresh",
+//   age: 20,
+// };
+
+// function display(city, country) {
+//   console.log(
+//     `My name is ${this.name} and my age is ${this.age}. I'm from ${city}, ${country}`
+//   );
+// }
+
+// function borrowing methods
+// display.call(vasanth, "chennai", "India");
+// display.call(suresh, "new york", "USA");
+
+// display.apply(vasanth, ["chennai", "India"]);
+
+// const vasanthData = display.bind(vasanth, "chennai", "India");
+// vasanthData();
+
+// function parentFn() {
+//   let count = 0;
+//   return function () {
+//     count += 1;
+//     if (count % 3 == 0) console.log("display");
+//   };
+// }
+
+// const display = parentFn();
+
+// display();
+// display();
+// display();
+
+// function parentFn() {
+//   let fname = "vasi";
+//   let age = 10;
+
+//   return function () {
+//     console.log("child fn", fname);
+//   };
+// }
+
+// const child = parentFn();
+
+// child();
+
+function useState(initialValue) {
+  const state = initialValue;
+
+  function setFn(newState) {
+    state = newState;
+    // trigger re-rendering process
+  }
+
+  return [state, setFn];
+}

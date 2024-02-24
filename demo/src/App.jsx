@@ -1,6 +1,8 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useState } from "react";
 
 import BorderWrapper from "./components/BorderWrapper";
+import Counter from "./components/Counter";
+import CounterHooks from "./components/CounterHooks";
 import Welcome from "./components/Welcome";
 
 function App() {
@@ -9,7 +11,7 @@ function App() {
       {/* <h1>App page</h1>
       <h2>App sub header</h2> */}
       {/* {<Display />} */}
-      <BorderWrapper color="red">
+      {/* <BorderWrapper color="red">
         <Welcome program={"Full stack"} name={"vasanth"}>
           <p>This is a child of welcome</p>
         </Welcome>
@@ -17,7 +19,10 @@ function App() {
       <br />
       <BorderWrapper color="green">
         <Welcome program={"Data Science"} name={"Kumar"} />
-      </BorderWrapper>
+      </BorderWrapper> */}
+
+      <Counter count={10} />
+      <CounterHooks />
     </>
   );
 }
