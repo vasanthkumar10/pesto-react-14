@@ -3,6 +3,9 @@ import React, { Fragment, useState } from "react";
 import BorderWrapper from "./components/BorderWrapper";
 import Counter from "./components/Counter";
 import CounterHooks from "./components/CounterHooks";
+import TaskManager from "./components/TaskManager";
+import UseStateDemo from "./components/UseStateDemo";
+import UserInfo from "./components/UserInfo";
 import Welcome from "./components/Welcome";
 
 function App() {
@@ -21,8 +24,12 @@ function App() {
         <Welcome program={"Data Science"} name={"Kumar"} />
       </BorderWrapper> */}
 
-      <Counter count={10} />
-      <CounterHooks />
+      {/* <Counter count={10} />
+      <CounterHooks /> */}
+
+      {/* <UseStateDemo name="Sachin" /> */}
+      {/* <UserInfo /> */}
+      <TaskManager />
     </>
   );
 }

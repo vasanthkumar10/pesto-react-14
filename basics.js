@@ -197,13 +197,59 @@
 
 // child();
 
-function useState(initialValue) {
-  const state = initialValue;
+// function useState(initialValue) {
+//   const state = initialValue;
 
-  function setFn(newState) {
-    state = newState;
-    // trigger re-rendering process
-  }
+//   function setFn(newState) {
+//     state = newState;
+//     // trigger re-rendering process
+//   }
 
-  return [state, setFn];
-}
+//   return [state, setFn];
+// }
+
+// demoPromise();
+
+// console.log("vasi");
+
+// setTimeout(() => {
+//   console.log(1);
+// }, 2000);
+
+// console.log("kumar");
+
+// setTimeout(() => {
+//   console.log(2);
+// }, 1000);
+
+// function demo() {
+//   console.log("demo");
+// }
+
+// setTimeout(() => {
+//   console.log(3);
+// }, 500);
+
+// console.log(4);
+
+// demo();
+
+// function demoPromise() {
+//   return new Promise((res, rej) => {
+//     setTimeout(() => {
+//       console.log("promise");
+//       res();
+//     }, 1000);
+//   });
+// }
+
+// console.log(console.log("vasanth"));
+
+// if (10 > 5 && console.log("vasanth")) {
+//   console.log("if");
+// } else {
+//   console.log("else");
+// }
+
+const isValid = 10 > 5 || "vasanth";
+console.log(isValid);
