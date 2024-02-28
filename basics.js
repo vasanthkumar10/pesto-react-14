@@ -251,5 +251,32 @@
 //   console.log("else");
 // }
 
-const isValid = 10 > 5 || "vasanth";
-console.log(isValid);
+// const isValid = 10 > 5 || "vasanth";
+// console.log(isValid);
+
+// const sum = ["1", "2", "3"].reduce((acc, curr) => {
+//   console.log(acc, curr);
+//   return acc + curr;
+// });
+// console.log(sum);
+
+Array.prototype.myReduce = function (callback, initialValue) {
+  if (initialValue) {
+    for (let i = 0; i < this.length; i++) {
+      initialValue = callback(initialValue, this[i]);
+    }
+  } else {
+    initialValue = this[0];
+    for (let i = 1; i < this.length; i++) {
+      initialValue = callback(initialValue, this[i]);
+    }
+  }
+
+  return initialValue;
+};
+
+const sum = [1, 2, 3].myReduce((acc, curr) => {
+  console.log(acc, curr);
+  return acc + curr;
+}, 10);
+console.log(sum);

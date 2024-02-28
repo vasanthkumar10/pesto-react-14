@@ -1,14 +1,32 @@
-import React, { Fragment, useState } from "react";
+import React, { Fragment, createContext, useState } from "react";
 
 import BorderWrapper from "./components/BorderWrapper";
+import { Button } from "./components/Button";
+import { ComponentA } from "./components/ComponentA";
+import ComponentD from "./components/ComponentD";
 import Counter from "./components/Counter";
 import CounterHooks from "./components/CounterHooks";
+import { Parent } from "./components/Parent";
 import TaskManager from "./components/TaskManager";
 import UseStateDemo from "./components/UseStateDemo";
 import UserInfo from "./components/UserInfo";
 import Welcome from "./components/Welcome";
 
+export const NameContext = createContext();
+export const AgeContext = createContext();
+
 function App() {
+  const [name, setName] = useState("Vasi");
+  const [age, setAge] = useState(10);
+
+  const incrementAge = () => {
+    setAge((prev) => prev + 1);
+  };
+
+  const decrementAge = () => {
+    setAge((prev) => prev - 1);
+  };
+
   return (
     <>
       {/* <h1>App page</h1>
@@ -29,7 +47,22 @@ function App() {
 
       {/* <UseStateDemo name="Sachin" /> */}
       {/* <UserInfo /> */}
-      <TaskManager />
+      {/* <TaskManager /> */}
+
+      {/* value is a keyword */}
+      {/* <AgeContext.Provider value={age}> */}
+      {/* <NameContext.Provider value={{ name, age }}>
+        <ComponentA />
+      </NameContext.Provider>
+      <NameContext.Provider value={name}>
+        <ComponentD />
+      </NameContext.Provider>
+      <Button text={"increment age"} action={incrementAge} color={"green"} />
+      <Button text={"decrement age"} action={decrementAge} color={"red"} /> */}
+
+      {/* </AgeContext.Provider> */}
+
+      <Parent />
     </>
   );
 }
@@ -38,6 +71,8 @@ function App() {
 // If we need JS inside HTML, wrap with {}
 // BorderWrapper -> Higher Order Component (takes one component as a
 // param in the form of props.children and returns a new component)
+
+// Inorder to change parent's state -> pass handler to the child as a prop
 
 // Webpack is the bundler which collects all files into a single JS file for production
 // Babel -> converts JSX to JS

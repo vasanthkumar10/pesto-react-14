@@ -1,6 +1,6 @@
-import React, { Component } from "react";
+import React, { Component, PureComponent } from "react";
 
-export default class Counter extends Component {
+export default class Counter extends PureComponent {
   constructor(props) {
     console.log("constructor");
     super(); // parent's constructor
