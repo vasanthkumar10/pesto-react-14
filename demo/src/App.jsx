@@ -1,12 +1,15 @@
 import React, { Fragment, createContext, useState } from "react";
 
+import AxiosDemo from "./components/AxiosDemo";
 import BorderWrapper from "./components/BorderWrapper";
-import { Button } from "./components/Button";
+import Button from "./components/Button";
 import { ComponentA } from "./components/ComponentA";
 import ComponentD from "./components/ComponentD";
 import Counter from "./components/Counter";
 import CounterHooks from "./components/CounterHooks";
 import { Parent } from "./components/Parent";
+import { ReducerDemo } from "./components/ReducerDemo";
+import { ReducerDemo1 } from "./components/ReducerDemo1";
 import TaskManager from "./components/TaskManager";
 import UseStateDemo from "./components/UseStateDemo";
 import UserInfo from "./components/UserInfo";
@@ -62,7 +65,12 @@ function App() {
 
       {/* </AgeContext.Provider> */}
 
-      <Parent />
+      {/* <Parent /> */}
+
+      {/* <ReducerDemo />
+      <ReducerDemo1 /> */}
+      {/* <AxiosDemo /> */}
+      <Button text={"increment"} color={"green"} />
     </>
   );
 }
