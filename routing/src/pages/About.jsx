@@ -5,25 +5,34 @@ import {
   useParams,
   useSearchParams,
 } from "react-router-dom";
-
-import React from "react";
+import React, { useEffect } from "react";
 
 function About() {
   const params = useParams();
-  const [searchParams] = useSearchParams();
+  const [searchParams, setSearchParams] = useSearchParams();
   console.log(
     "params",
     params,
     searchParams.get("name"),
-    searchParams.get("age"),
-    searchParams.getAll("name")
+    searchParams.get("age")
   );
+
+  useEffect(() => {
+    console.log("search params in effect", searchParams);
+  }, [searchParams]);
+
   return (
     <>
       <h1>About</h1>
-      <Routes>
-        <Route path="vasi" element={<h1>Vasi</h1>} />
-      </Routes>
+      <button
+        onClick={() => {
+          setSearchParams((prev) => {
+            return searchParams.append("place", "chennai");
+          });
+        }}
+      >
+        show searchParams
+      </button>
     </>
   );
 }

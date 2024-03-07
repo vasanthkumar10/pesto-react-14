@@ -22,7 +22,7 @@ function App() {
         />
         {/* <Route path="/about/:name/:age" element={<About />} /> */}
         <Route
-          path="/about"
+          path="/about/:profile/:id"
           element={
             <Suspense fallback={<h2>Loading....</h2>}>
               <About />
