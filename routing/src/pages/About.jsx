@@ -10,7 +10,14 @@ import React from "react";
 
 function About() {
   const params = useParams();
-  console.log("params", params);
+  const [searchParams] = useSearchParams();
+  console.log(
+    "params",
+    params,
+    searchParams.get("name"),
+    searchParams.get("age"),
+    searchParams.getAll("name")
+  );
   return (
     <>
       <h1>About</h1>

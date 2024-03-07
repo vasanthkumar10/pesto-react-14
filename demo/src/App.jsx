@@ -54,14 +54,14 @@ function App() {
 
       {/* value is a keyword */}
       {/* <AgeContext.Provider value={age}> */}
-      {/* <NameContext.Provider value={{ name, age }}>
+      <NameContext.Provider value={{ name, age }}>
         <ComponentA />
       </NameContext.Provider>
       <NameContext.Provider value={name}>
         <ComponentD />
       </NameContext.Provider>
       <Button text={"increment age"} action={incrementAge} color={"green"} />
-      <Button text={"decrement age"} action={decrementAge} color={"red"} /> */}
+      <Button text={"decrement age"} action={decrementAge} color={"red"} />
 
       {/* </AgeContext.Provider> */}
 
