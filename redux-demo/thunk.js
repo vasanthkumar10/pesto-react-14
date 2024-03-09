@@ -57,7 +57,7 @@ const fetchPosts = () => {
   return function thunkFn(dispatch) {
     dispatch(fetchPostsLoading());
     axios
-      .get("https://jsonplaceholder.typicode.com/psts/1")
+      .get("https://jsonplaceholder.typicode.com/posts/1")
       .then((response) => {
         const posts = response.data;
         // console.log("posts", posts);
