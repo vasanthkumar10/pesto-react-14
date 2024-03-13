@@ -260,23 +260,31 @@
 // });
 // console.log(sum);
 
-Array.prototype.myReduce = function (callback, initialValue) {
-  if (initialValue) {
-    for (let i = 0; i < this.length; i++) {
-      initialValue = callback(initialValue, this[i]);
-    }
-  } else {
-    initialValue = this[0];
-    for (let i = 1; i < this.length; i++) {
-      initialValue = callback(initialValue, this[i]);
-    }
-  }
+// Array.prototype.myReduce = function (callback, initialValue) {
+//   if (initialValue) {
+//     for (let i = 0; i < this.length; i++) {
+//       initialValue = callback(initialValue, this[i]);
+//     }
+//   } else {
+//     initialValue = this[0];
+//     for (let i = 1; i < this.length; i++) {
+//       initialValue = callback(initialValue, this[i]);
+//     }
+//   }
 
-  return initialValue;
+//   return initialValue;
+// };
+
+// const sum = [1, 2, 3].myReduce((acc, curr) => {
+//   console.log(acc, curr);
+//   return acc + curr;
+// }, 10);
+// console.log(sum);
+
+function getSum(n1, n2) {
+  return n1 + n2;
+}
+
+module.exports = {
+  getSum,
 };
-
-const sum = [1, 2, 3].myReduce((acc, curr) => {
-  console.log(acc, curr);
-  return acc + curr;
-}, 10);
-console.log(sum);

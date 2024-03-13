@@ -21,6 +21,7 @@ const postSlice = createSlice({
   name: "posts",
   initialState,
   extraReducers: (builder) => {
+    // builder pattern
     builder.addCase(fetchPosts.pending, (state, action) => {
       state.loading = true;
     }),
