@@ -1,0 +1,6 @@
+react
+react-router-dom
+axios
+material ui
+react query
+Hotel API 
